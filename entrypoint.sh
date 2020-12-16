@@ -8,5 +8,11 @@ else
   echo "${INPUT_KUBECONFIG}" > ~/.kube/config
 fi
 
-echo "Hello $INPUT_EXEC"
+echo -e "\033[36mPreparing execution\033[0m"
+echo "${INPUT_EXEC}" > run.sh
+chmod +x ./run.sh
+
+echo -e "\033[36mExecuting \033[0m"
+output=$(./run.sh)
+echo "$output"
 
