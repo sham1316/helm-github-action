@@ -8,6 +8,18 @@ inputs:
   kubeconfig:
     description: 'Kubeconfig'
     required: false
+  repo_url:
+    description: 'Kubeconfig'
+    required: false
+  repo_alias:
+    description: 'Kubeconfig'
+    required: false
+  repo_user:
+    description: 'Kubeconfig'
+    required: false
+  repo_pass:
+    description: 'Kubeconfig'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
