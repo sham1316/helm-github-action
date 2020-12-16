@@ -8,7 +8,7 @@ else
   echo "${INPUT_KUBECONFIG}" > ~/.kube/config
 fi
 
-if [ $REPO_URL != "" ]; then
+if [ -n $REPO_URL ]; then
     echo -e "\033[36mAdd chart repo\033[0m"
     helm repo add $REPO_ALIAS $REPO_URL --username ${REPO_USER} --password ${REPO_PASS}
     helm repo update
