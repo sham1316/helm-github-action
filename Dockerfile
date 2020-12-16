@@ -1,8 +1,8 @@
-FROM sham1316/jenkins-jnlp-slave:7
+FROM alpine/helm:3.4.2
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
 
-RUN chmod +x entrypoint.sh
+RUN chmod +x /entrypoint.sh
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
